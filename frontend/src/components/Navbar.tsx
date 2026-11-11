@@ -1,25 +1,64 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import HeroSection from './components/HeroSection';
-import HeadlinesBar from './components/HeadlinesBar';
-import ArticleGrid from './components/ArticleGrid';
-import MembershipSection from './components/MembershipSection';
-import Footer from './components/Footer';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const App: React.FC = () => {
+const links = ['Home', 'Articles', 'Resources', 'About'];
+
+const Navbar: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Navbar />
-        <HeroSection />
-        <HeadlinesBar />
-        <ArticleGrid />
-        <MembershipSection />
-        <Footer />
+    <header className="sticky top-0 z-50 border-b bg-white/95 shadow-sm backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+        <Link to="/" className="flex items-center gap-2">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-blue-600 text-xl font-bold text-white">
+            F
+          </span>
+          <span className="text-xl font-bold text-gray-900">
+            Finance<span className="text-green-600">101</span>
+          </span>
+        </Link>
+
+        <nav className="hidden items-center gap-8 md:flex">
+          {links.map((link) => (
+            <Link
+              key={link}
+              to="#"
+              className="font-medium text-gray-600 transition-colors hover:text-green-600"
+            >
+              {link}
+            </Link>
+          ))}
+          <button className="rounded-lg bg-gradient-to-r from-green-600 to-blue-600 px-5 py-2.5 font-semibold text-white shadow-md transition hover:shadow-lg">
+            Join Now
+          </button>
+        </nav>
+
+        <button
+          type="button"
+          className="rounded-lg p-2 text-gray-700 md:hidden"
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span className="text-2xl">{menuOpen ? 'x' : '☰'}</span>
+        </button>
       </div>
-    </Router>
+
+      {menuOpen && (
+        <nav className="space-y-1 border-t bg-white px-4 py-4 md:hidden">
+          {links.map((link) => (
+            <Link
+              key={link}
+              to="#"
+              className="block rounded-lg px-3 py-2 font-medium text-gray-600 hover:bg-green-50 hover:text-green-700"
+            >
+              {link}
+            </Link>
+          ))}
+        </nav>
+      )}
+    </header>
   );
 };
 
-export default App;
+export default Navbar;
