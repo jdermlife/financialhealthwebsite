@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
           <span className="text-green-700">Your Path to</span>{' '}
-          <span className="text-blue-700">Financial Health</span>
+          <span className="text-blue-700">Healthy and Wealthy Life</span>
         </h2>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
           Discover expert tips, strategies, and guides to help you master personal finance,
