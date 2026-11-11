@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/gospuymh/financialhealth.quantech.international
+    - /bin/rsync -a --exclude='.git' ./ $DEPLOYPATH
