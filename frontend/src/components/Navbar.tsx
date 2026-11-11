@@ -28,9 +28,13 @@ const Navbar: React.FC = () => {
               {link}
             </Link>
           ))}
-          <button className="rounded-lg bg-gradient-to-r from-green-600 to-blue-600 px-5 py-2.5 font-semibold text-white shadow-md transition hover:shadow-lg">
+          {/* Updated Join Now link pointing to your external domain */}
+          <a
+            href="https://filscore-ai.quantech.international"
+            className="rounded-lg bg-gradient-to-r from-green-600 to-blue-600 px-5 py-2.5 font-semibold text-white shadow-md transition hover:shadow-lg text-center"
+          >
             Join Now
-          </button>
+          </a>
         </nav>
 
         <button
@@ -55,6 +59,13 @@ const Navbar: React.FC = () => {
               {link}
             </Link>
           ))}
+          {/* Also added to the mobile dropdown menu for consistency */}
+          <a
+            href="https://filscore-ai.quantech.international"
+            className="block rounded-lg bg-gradient-to-r from-green-600 to-blue-600 px-3 py-2.5 font-semibold text-white text-center shadow-md"
+          >
+            Join Now
+          </a>
         </nav>
       )}
     </header>
