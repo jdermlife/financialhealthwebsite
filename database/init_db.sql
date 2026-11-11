@@ -70,7 +70,7 @@ INSERT INTO articles (title, slug, excerpt, content, category, author, image_url
  'Discover practical steps to build a robust savings plan that works with your lifestyle and income.',
  'Full article content here...', 'SAVINGS', 'Admin', 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400'),
 
-('Hello! Welcome to Finance101', 'welcome-to-finance101',
+('Hello! Welcome to Finance Health', 'welcome-to-finance-health',
  'Welcome to our blog! Here we share tips, strategies, and guides to help you master personal finance.',
  'Full article content here...', 'INSIGHTS', 'Admin', 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400'),
 

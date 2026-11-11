@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from typing import List
 import models, schemas, database
 
-app = FastAPI(title="Finance101 API", version="1.0.0")
+app = FastAPI(title="Finance Health API", version="1.0.0")
 
 # CORS
 app.add_middleware(
@@ -110,7 +110,7 @@ def subscribe_newsletter(email: schemas.NewsletterSubscribe, db: Session = Depen
 # ---- Health Check ----
 @app.get("/api/health")
 def health_check():
-    return {"status": "healthy", "service": "Finance101 API"}
+    return {"status": "healthy", "service": "Finance Health API"}
 
 if __name__ == "__main__":
     import uvicorn

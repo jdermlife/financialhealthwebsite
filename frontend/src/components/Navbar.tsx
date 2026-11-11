@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
             F
           </span>
           <span className="text-xl font-bold text-gray-900">
-            Finance<span className="text-green-600">101</span>
+            Finance <span className="text-green-600">Health</span>
           </span>
         </Link>
 

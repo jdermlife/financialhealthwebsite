@@ -12,10 +12,10 @@ const Footer: React.FC = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">F</span>
               </div>
-              <h3 className="text-white font-bold text-lg">Finance101</h3>
+              <h3 className="text-white font-bold text-lg">Finance Health</h3>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Finance101 is your go-to resource for personal finance education. We provide practical tips,
+              Finance Health is your go-to resource for personal finance education. We provide practical tips,
               in-depth guides, and the latest news to help you learn, plan, and prosper.
             </p>
           </div>
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p>© 2026 Finance101. All rights reserved.</p>
+          <p>© 2026 Finance Health. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-green-400">Privacy Policy</a>
             <a href="#" className="hover:text-green-400">Terms of Service</a>
