@@ -24,7 +24,7 @@ const articles: Article[] = [
   },
   {
     id: 2,
-    title: 'Hello! Welcome to Finance Health',
+    title: 'Hello! Welcome to Financial Health',
     excerpt: 'Welcome to our blog! Here we share tips, strategies, and guides to help you master personal finance...',
     category: 'INSIGHTS',
     categoryColor: 'bg-blue-600',
