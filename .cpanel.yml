@@ -2,4 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/gospuymh/financialhealth.quantech.international
-    - /bin/rsync -a --exclude='.git' ./ $DEPLOYPATH
+    - (cd frontend && npm ci && npm run build)
+    - /bin/rsync -a frontend/dist/ $DEPLOYPATH/
