@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface Article {
   id: number;
@@ -9,6 +10,7 @@ interface Article {
   author: string;
   date: string;
   image: string;
+  href?: string;
 }
 
 const articles: Article[] = [
@@ -21,6 +23,7 @@ const articles: Article[] = [
     author: 'Admin',
     date: 'April 10, 2026',
     image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&h=250&fit=crop',
+    href: '/articles/growing-your-savings-2026',
   },
   {
     id: 2,
@@ -75,8 +78,8 @@ const articles: Article[] = [
 ];
 
 const ArticleCard: React.FC<{ article: Article }> = ({ article }) => {
-  return (
-    <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+  const card = (
+    <div className="h-full bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
       <div className="relative overflow-hidden">
         <img
           src={article.image}
@@ -99,6 +102,12 @@ const ArticleCard: React.FC<{ article: Article }> = ({ article }) => {
       </div>
     </div>
   );
+
+  return article.href ? (
+    <Link to={article.href} className="block h-full" aria-label={`Read ${article.title}`}>
+      {card}
+    </Link>
+  ) : card;
 };
 
 const ArticleGrid: React.FC = () => {

@@ -6,18 +6,27 @@ import HeadlinesBar from './components/HeadlinesBar';
 import ArticleGrid from './components/ArticleGrid';
 import MembershipSection from './components/MembershipSection';
 import Footer from './components/Footer';
+import SavingsArticle from './components/SavingsArticle';
 
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Navbar />
-        <HeroSection />
-        <HeadlinesBar />
-        <ArticleGrid />
-        <MembershipSection />
-        <Footer />
-      </div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="min-h-screen bg-gray-50">
+              <Navbar />
+              <HeroSection />
+              <HeadlinesBar />
+              <ArticleGrid />
+              <MembershipSection />
+              <Footer />
+            </div>
+          }
+        />
+        <Route path="/articles/growing-your-savings-2026" element={<SavingsArticle />} />
+      </Routes>
     </Router>
   );
 };
